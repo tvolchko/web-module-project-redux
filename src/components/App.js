@@ -47,5 +47,10 @@ const App = props => {
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return{
+  movies: state.movie.movies
+  }
+}
 
-export default App;
+export default connect(mapStateToProps)(App);
